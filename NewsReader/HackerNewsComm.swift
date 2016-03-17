@@ -15,6 +15,8 @@ class HackerNewsComm {
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
             
+            print(data)
+            
         }
         
         task.resume()
