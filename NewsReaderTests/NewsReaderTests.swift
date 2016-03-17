@@ -31,6 +31,9 @@ class NewsReaderTests: XCTestCase {
         }
       
         waitForExpectationsWithTimeout(5) { error in
+            if error != nil {
+                XCTFail("stories weren't fetched in 5 seconds")
+            }
         }
     }
     
