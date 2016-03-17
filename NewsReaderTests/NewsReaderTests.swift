@@ -23,12 +23,14 @@ class NewsReaderTests: XCTestCase {
     
     func testFetchLatestStories(){
         let comm = HackerNewsComm()
-        comm.fetchLatestStories()
         
         let expectation = expectationWithDescription("fetch latest stories")
-     
-        waitForExpectationsWithTimeout(5) { error in
+        
+        comm.fetchLatestStories(){ collection in
             expectation.fulfill()
+        }
+      
+        waitForExpectationsWithTimeout(5) { error in
         }
     }
     
