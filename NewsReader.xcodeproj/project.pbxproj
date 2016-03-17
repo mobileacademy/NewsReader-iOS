@@ -332,6 +332,7 @@
 				8ED0FBF81C940FE300AAEC22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
