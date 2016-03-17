@@ -11,6 +11,11 @@ import UIKit
 class HackerNewsComm {
     
     func fetchLatestStories(){
+        let url = NSURL( string:HackerNewsAPI.newStoryEndpoint )
+        
+        NSURLSession.sharedSession().dataTaskWithURL(url!) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+            
+        }
         
     }
     
