@@ -16,6 +16,7 @@
 		8ED0FBFC1C942BCE00AAEC22 /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FBFB1C942BCE00AAEC22 /* StoryModel.m */; };
 		8ED0FBFF1C942DE200AAEC22 /* StoryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FBFE1C942DE200AAEC22 /* StoryCollection.m */; };
 		8ED0FC031C94437900AAEC22 /* StoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FC021C94437900AAEC22 /* StoryTableViewCell.m */; };
+		8ED0FC061C9B0CFB00AAEC22 /* HackerNewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FC051C9B0CFB00AAEC22 /* HackerNewsAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		8ED0FBFE1C942DE200AAEC22 /* StoryCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryCollection.m; sourceTree = "<group>"; };
 		8ED0FC011C94437900AAEC22 /* StoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryTableViewCell.h; sourceTree = "<group>"; };
 		8ED0FC021C94437900AAEC22 /* StoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryTableViewCell.m; sourceTree = "<group>"; };
+		8ED0FC041C9B0CFA00AAEC22 /* NewsReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsReader-Bridging-Header.h"; sourceTree = "<group>"; };
+		8ED0FC051C9B0CFB00AAEC22 /* HackerNewsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				8ED0FBFB1C942BCE00AAEC22 /* StoryModel.m */,
 				8ED0FBFD1C942DE200AAEC22 /* StoryCollection.h */,
 				8ED0FBFE1C942DE200AAEC22 /* StoryCollection.m */,
+				8ED0FC051C9B0CFB00AAEC22 /* HackerNewsAPI.swift */,
+				8ED0FC041C9B0CFA00AAEC22 /* NewsReader-Bridging-Header.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED0FC061C9B0CFB00AAEC22 /* HackerNewsAPI.swift in Sources */,
 				8ED0FBEA1C940FE300AAEC22 /* ViewController.m in Sources */,
 				8ED0FC031C94437900AAEC22 /* StoryTableViewCell.m in Sources */,
 				8ED0FBFC1C942BCE00AAEC22 /* StoryModel.m in Sources */,
@@ -295,10 +301,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NewsReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.mobileacademy.NewsReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewsReader/NewsReader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -306,10 +315,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NewsReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.mobileacademy.NewsReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewsReader/NewsReader-Bridging-Header.h";
 			};
 			name = Release;
 		};
