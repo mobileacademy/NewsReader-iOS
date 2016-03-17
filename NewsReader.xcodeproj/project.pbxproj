@@ -17,6 +17,7 @@
 		8ED0FBFF1C942DE200AAEC22 /* StoryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FBFE1C942DE200AAEC22 /* StoryCollection.m */; };
 		8ED0FC031C94437900AAEC22 /* StoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FC021C94437900AAEC22 /* StoryTableViewCell.m */; };
 		8ED0FC061C9B0CFB00AAEC22 /* HackerNewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FC051C9B0CFB00AAEC22 /* HackerNewsAPI.swift */; };
+		8ED0FC091C9B183700AAEC22 /* HackerNewsComm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FC081C9B183700AAEC22 /* HackerNewsComm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8ED0FC021C94437900AAEC22 /* StoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryTableViewCell.m; sourceTree = "<group>"; };
 		8ED0FC041C9B0CFA00AAEC22 /* NewsReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsReader-Bridging-Header.h"; sourceTree = "<group>"; };
 		8ED0FC051C9B0CFB00AAEC22 /* HackerNewsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsAPI.swift; sourceTree = "<group>"; };
+		8ED0FC081C9B183700AAEC22 /* HackerNewsComm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsComm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		8ED0FBE11C940FE300AAEC22 /* NewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				8ED0FC071C9B17EB00AAEC22 /* Comm */,
 				8ED0FC001C94431200AAEC22 /* Views */,
 				8ED0FBF91C942B5C00AAEC22 /* Models */,
 				8ED0FBE51C940FE300AAEC22 /* AppDelegate.h */,
@@ -113,6 +116,14 @@
 				8ED0FC021C94437900AAEC22 /* StoryTableViewCell.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		8ED0FC071C9B17EB00AAEC22 /* Comm */ = {
+			isa = PBXGroup;
+			children = (
+				8ED0FC081C9B183700AAEC22 /* HackerNewsComm.swift */,
+			);
+			name = Comm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				8ED0FBFC1C942BCE00AAEC22 /* StoryModel.m in Sources */,
 				8ED0FBE71C940FE300AAEC22 /* AppDelegate.m in Sources */,
 				8ED0FBE41C940FE300AAEC22 /* main.m in Sources */,
+				8ED0FC091C9B183700AAEC22 /* HackerNewsComm.swift in Sources */,
 				8ED0FBFF1C942DE200AAEC22 /* StoryCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
