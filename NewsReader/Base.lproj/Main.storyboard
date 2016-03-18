@@ -130,7 +130,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="go_to_lates" id="vgD-9Y-eGX"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="go_to_latest" id="vgD-9Y-eGX"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -167,6 +167,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NoW-pQ-paC"/>
+        <segue reference="vgD-9Y-eGX"/>
     </inferredMetricsTieBreakers>
 </document>
