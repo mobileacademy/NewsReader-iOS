@@ -84,11 +84,15 @@ class HackerNewsViewController: UITableViewController {
         case "go_to_latest":
             comm.fetchLatestStories{ collection in
                 print( "got latest stories" )
+                
+                (segue.destinationViewController as! ViewController).dataSource = collection.topStories()
             }
             break
         case "go_to_top":
             comm.fetchTopStories{ collection in
                 print( "got top stories" )
+                
+                (segue.destinationViewController as! ViewController).dataSource = collection.topStories()
             }
             break
         default:
