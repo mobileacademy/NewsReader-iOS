@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HackerNews Stories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -24,7 +24,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="storyCellId" id="d3v-4R-OPp" customClass="StoryTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d3v-4R-OPp" id="bPi-r6-kuO">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -70,6 +70,7 @@
                             <constraint firstItem="KCP-fH-kkG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vUH-Ev-FjR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="HackerNews Stories" id="bK7-7K-ckb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,6 +106,9 @@
                                                 <constraint firstItem="a0T-7I-uEt" firstAttribute="centerY" secondItem="jpv-YZ-g3a" secondAttribute="centerY" id="Ocw-fe-Srk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="NoW-pQ-paC"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="czl-MR-bVU">
                                         <rect key="frame" x="0.0" y="108" width="600" height="44"/>
@@ -125,6 +129,9 @@
                                                 <constraint firstItem="yiW-Zl-5d0" firstAttribute="centerY" secondItem="j1W-J3-4wY" secondAttribute="centerY" id="oWi-Dc-RCY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="vgD-9Y-eGX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -157,4 +164,7 @@
             <point key="canvasLocation" x="-205" y="324"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NoW-pQ-paC"/>
+    </inferredMetricsTieBreakers>
 </document>
