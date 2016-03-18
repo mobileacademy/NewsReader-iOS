@@ -107,7 +107,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="NoW-pQ-paC"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="go_to_top" id="NoW-pQ-paC"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="czl-MR-bVU">
@@ -130,7 +130,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="vgD-9Y-eGX"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="go_to_lates" id="vgD-9Y-eGX"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
