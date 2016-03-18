@@ -80,15 +80,15 @@
         <scene sceneID="Aa0-1B-QTh">
             <objects>
                 <tableViewController id="sSE-RZ-QCR" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6LQ-vG-zF4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="6LQ-vG-zF4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="2yj-Y1-RPX">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bib-RM-ipC">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bib-RM-ipC" id="jpv-YZ-g3a">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -111,7 +111,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="czl-MR-bVU">
-                                        <rect key="frame" x="0.0" y="108" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="143" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="czl-MR-bVU" id="j1W-J3-4wY">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -141,7 +141,9 @@
                             <outlet property="delegate" destination="sSE-RZ-QCR" id="Ic5-Vh-s5w"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="HackerNews" id="jjv-qr-yKq"/>
+                    <navigationItem key="navigationItem" title="HackerNews" id="jjv-qr-yKq">
+                        <barButtonItem key="backBarButtonItem" title="back" id="9yc-js-4ag"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78L-Th-L6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
