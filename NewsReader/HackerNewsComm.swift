@@ -22,7 +22,7 @@ class HackerNewsComm {
             
             for (_,value) in json {
                 let story:StoryModel = StoryModel()
-                story.id = value.string
+                story.id = String(value.int!)
                 
                 storyCollection.addStory(story)
             }
@@ -45,12 +45,27 @@ class HackerNewsComm {
             
             for (_,value) in json {
                 let story = StoryModel()
-                story.id = value.string
+                story.id = String(value.int!)
                 
                 collection.addStory(story)
             }
             
             completionHandler(collection)
+        }
+        
+        task.resume()
+    }
+    
+    func populateStory( story:StoryModel, completionHandler: (StoryModel)->Void ){
+        let url = NSURL(string:HackerNewsAPI.objectURL( story.id ))!
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url){ data, response, error in
+            let json = JSON(data:data!)
+            
+            story.url = json["url"].string
+            story.title = json["title"].string
+            print(story)
+            completionHandler(story)
         }
         
         task.resume()
