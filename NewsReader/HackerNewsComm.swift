@@ -65,7 +65,9 @@ class HackerNewsComm {
             story.url = json["url"].string
             story.title = json["title"].string
             print(story)
-            completionHandler(story)
+            dispatch_async(dispatch_get_main_queue()){
+                completionHandler(story)
+            }
         }
         
         task.resume()
