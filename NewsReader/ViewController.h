@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StoryModel.h"
 
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic) NSArray<StoryModel*>* dataSource;
 
 @end
 

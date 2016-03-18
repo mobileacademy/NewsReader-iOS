@@ -10,9 +10,7 @@
 #import "StoryCollection.h"
 #import "StoryTableViewCell.h"
 
-@interface ViewController (){
-    StoryCollection* _dataSource;
-}
+@interface ViewController ()
 
 @end
 
@@ -22,26 +20,13 @@
     self = [super initWithCoder:aDecoder];
     
     if(self){
-        _dataSource = [StoryCollection new];
-        
-        StoryModel* model;
-        
-        for( int i = 0; i<10; i++){
-            model = [StoryModel new];
-            
-            model.title = [NSString stringWithFormat:@"title %d", i];
-            model.id = [NSString stringWithFormat:@"id %d", i];
-            model.url = [NSString stringWithFormat:@"http://myapi.com/story?id=%d", i];
-        
-            [_dataSource addStory:model];
-        }
     }
     
     return self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _dataSource.topStories.count;
+    return self.dataSource.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -51,11 +36,15 @@
     StoryTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellID
         forIndexPath:indexPath];
     
-    cell.titleLabel.text = _dataSource.topStories[ indexPath.row ].title;
+    cell.titleLabel.text = _dataSource[ indexPath.row ].title;
     
-    cell.idLabel.text = _dataSource.topStories[ indexPath.row ].id;
+    cell.idLabel.text = _dataSource[ indexPath.row ].id;
     
     return cell;
+}
+
+- (void) setDataSource:(NSArray<StoryModel *> *)dataSource{
+    _dataSource = dataSource;
 }
 
 - (void)viewDidLoad {
