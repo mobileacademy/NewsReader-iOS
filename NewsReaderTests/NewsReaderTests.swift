@@ -37,4 +37,20 @@ class NewsReaderTests: XCTestCase {
         }
     }
     
+    func testFetchTopStories(){
+        let comm = HackerNewsComm()
+        
+        let exp = expectationWithDescription("fetch top stories")
+        
+        comm.fetchTopStories { collection in
+            exp.fulfill()
+        }
+        
+        waitForExpectationsWithTimeout(5){ error in
+            if error != nil {
+                XCTFail("top stories weren't fetched in 5 seconds")
+            }
+        }
+    }
+    
 }
