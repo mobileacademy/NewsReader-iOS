@@ -45,6 +45,8 @@
 
 - (void) setDataSource:(NSArray<StoryModel *> *)dataSource{
     _dataSource = dataSource;
+    
+    [self.storyTable reloadData];
 }
 
 - (void)viewDidLoad {

@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic) NSArray<StoryModel*>* dataSource;
+@property (weak, nonatomic) IBOutlet UITableView *storyTable;
 
 @end
 
