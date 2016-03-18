@@ -77,7 +77,23 @@ class HackerNewsViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        print(segue.identifier)
+        let comm = HackerNewsComm()
+        
+        switch segue.identifier!
+        {
+        case "go_to_latest":
+            comm.fetchLatestStories{ collection in
+                print( "got latest stories" )
+            }
+            break
+        case "go_to_top":
+            comm.fetchTopStories{ collection in
+                print( "got top stories" )
+            }
+            break
+        default:
+            break
+        }
     }
 
 }
