@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class HackerNewsComm {
     
@@ -15,17 +16,44 @@ class HackerNewsComm {
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
             
-            print(data)
+            let json = JSON(data: data!)
             
-            completionHandler( StoryCollection() )
+            let storyCollection:StoryCollection = StoryCollection()
+            
+            for (_,value) in json {
+                let story:StoryModel = StoryModel()
+                story.id = value.string
+                
+                storyCollection.addStory(story)
+            }
+            
+            completionHandler( storyCollection )
         }
         
         task.resume()
         
     }
     
-    func fetchTopStories(){
+    func fetchTopStories(completionHandler:(StoryCollection)->Void){
+        let url = NSURL( string:HackerNewsAPI.topStoryEndpoint )
         
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { data, response, error in
+            
+            let json = JSON(data: data!)
+            
+            let collection = StoryCollection()
+            
+            for (_,value) in json {
+                let story = StoryModel()
+                story.id = value.string
+                
+                collection.addStory(story)
+            }
+            
+            completionHandler(collection)
+        }
+        
+        task.resume()
     }
     
 }
