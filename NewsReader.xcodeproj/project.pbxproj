@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		283D3BAF0A1CB47C8011E2C3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FB6056D52A0FE3088261EF /* Pods.framework */; };
 		8E5109C11C9C295200744C64 /* HackerNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5109C01C9C295200744C64 /* HackerNewsViewController.swift */; };
+		8EB138221CA3EA850043B63B /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB138211CA3EA850043B63B /* StoryViewController.swift */; };
 		8ED0FBE41C940FE300AAEC22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FBE31C940FE300AAEC22 /* main.m */; };
 		8ED0FBE71C940FE300AAEC22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FBE61C940FE300AAEC22 /* AppDelegate.m */; };
 		8ED0FBEA1C940FE300AAEC22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FBE91C940FE300AAEC22 /* ViewController.m */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		11F7A410335B24E78D379700 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E5109C01C9C295200744C64 /* HackerNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsViewController.swift; sourceTree = "<group>"; };
+		8EB138211CA3EA850043B63B /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		8ED0FBDF1C940FE300AAEC22 /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED0FBE31C940FE300AAEC22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8ED0FBE51C940FE300AAEC22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				8ED0FBE81C940FE300AAEC22 /* ViewController.h */,
 				8ED0FBE91C940FE300AAEC22 /* ViewController.m */,
 				8E5109C01C9C295200744C64 /* HackerNewsViewController.swift */,
+				8EB138211CA3EA850043B63B /* StoryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB138221CA3EA850043B63B /* StoryViewController.swift in Sources */,
 				8ED0FC061C9B0CFB00AAEC22 /* HackerNewsAPI.swift in Sources */,
 				8ED0FBEA1C940FE300AAEC22 /* ViewController.m in Sources */,
 				8ED0FC031C94437900AAEC22 /* StoryTableViewCell.m in Sources */,
