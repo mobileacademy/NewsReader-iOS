@@ -83,7 +83,7 @@
         <!--Story-->
         <scene sceneID="aeJ-kv-Lwi">
             <objects>
-                <viewController title="Story" id="UtO-mb-Vh3" sceneMemberID="viewController">
+                <viewController title="Story" id="UtO-mb-Vh3" customClass="StoryViewController" customModule="NewsReader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="csO-Yf-PaC"/>
                         <viewControllerLayoutGuide type="bottom" id="Dv9-Jl-c3a"/>
@@ -105,6 +105,9 @@
                             <constraint firstItem="HiR-IZ-5rZ" firstAttribute="centerX" secondItem="RXT-Gc-dZh" secondAttribute="centerX" id="ZUk-Sf-vak"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="HiR-IZ-5rZ" id="Jhf-5C-PGm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2eV-6j-tTa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
