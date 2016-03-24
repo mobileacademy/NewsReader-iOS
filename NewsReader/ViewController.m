@@ -12,9 +12,9 @@
 
 #import "NewsReader-Swift.h"
 
-@interface ViewController (){
-    
-}
+@interface ViewController ()
+
+@property (nonatomic) StoryModel* selectedStory;
 
 @end
 
@@ -47,6 +47,10 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.selectedStory = _dataSource[ indexPath.row ];
+}
+
 - (void) setDataSource:(NSArray<StoryModel *> *)dataSource{
     _dataSource = dataSource;
     
@@ -57,7 +61,7 @@
     if( [segue.identifier isEqualToString:@"go_to_show_story"] ){
         StoryViewController* dest = (StoryViewController*)segue.destinationViewController;
         
-       
+        [dest goToUrl:self.selectedStory.url];
     }
 }
 
