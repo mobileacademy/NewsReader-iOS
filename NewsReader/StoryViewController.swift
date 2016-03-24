@@ -12,10 +12,18 @@ class StoryViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     
+    private var isLoaded:Bool = false
+    private var urlToLoad:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        isLoaded = true
+        
+        if urlToLoad != nil {
+            goToUrl(urlToLoad!)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,11 +32,23 @@ class StoryViewController: UIViewController {
     }
     
     func goToUrl(urlS:String){
+        guard isLoaded == true else{
+            urlToLoad = urlS
+            return
+        }
+        
         guard let url = NSURL(string:urlS) else{
             return
         }
         
         let req = NSURLRequest(URL: url)
+        
+        //remove the comment and can also remove
+        //isLoaded
+        //urlToLoad
+        //the first guard
+        //logic from viewDidLoad
+        //self.view = self.view
         
         webView.loadRequest(req)
     }
