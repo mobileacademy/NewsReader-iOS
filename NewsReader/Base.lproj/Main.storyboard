@@ -53,6 +53,7 @@
                                         <connections>
                                             <outlet property="idLabel" destination="hsi-nh-yyY" id="SyN-0u-sle"/>
                                             <outlet property="titleLabel" destination="vbN-cU-Ksm" id="Oas-rC-VhG"/>
+                                            <segue destination="UtO-mb-Vh3" kind="show" id="SxC-vM-6ZE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -78,6 +79,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1367" y="324"/>
+        </scene>
+        <!--Story-->
+        <scene sceneID="aeJ-kv-Lwi">
+            <objects>
+                <viewController title="Story" id="UtO-mb-Vh3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="csO-Yf-PaC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dv9-Jl-c3a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RXT-Gc-dZh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiR-IZ-5rZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HiR-IZ-5rZ" firstAttribute="width" secondItem="RXT-Gc-dZh" secondAttribute="width" id="2AY-XH-rJD"/>
+                            <constraint firstItem="HiR-IZ-5rZ" firstAttribute="height" secondItem="RXT-Gc-dZh" secondAttribute="height" id="RVo-Ko-wYm"/>
+                            <constraint firstItem="HiR-IZ-5rZ" firstAttribute="centerY" secondItem="RXT-Gc-dZh" secondAttribute="centerY" id="WeQ-g3-Noa"/>
+                            <constraint firstItem="HiR-IZ-5rZ" firstAttribute="centerX" secondItem="RXT-Gc-dZh" secondAttribute="centerX" id="ZUk-Sf-vak"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2eV-6j-tTa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2175" y="324"/>
         </scene>
         <!--HackerNews-->
         <scene sceneID="Aa0-1B-QTh">
