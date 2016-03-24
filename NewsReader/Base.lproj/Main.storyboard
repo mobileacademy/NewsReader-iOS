@@ -53,7 +53,6 @@
                                         <connections>
                                             <outlet property="idLabel" destination="hsi-nh-yyY" id="SyN-0u-sle"/>
                                             <outlet property="titleLabel" destination="vbN-cU-Ksm" id="Oas-rC-VhG"/>
-                                            <segue destination="UtO-mb-Vh3" kind="show" identifier="go_to_show_story" id="SxC-vM-6ZE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -74,6 +73,7 @@
                     <navigationItem key="navigationItem" title="HackerNews Stories" id="bK7-7K-ckb"/>
                     <connections>
                         <outlet property="storyTable" destination="KCP-fH-kkG" id="rc8-hn-dzP"/>
+                        <segue destination="UtO-mb-Vh3" kind="show" identifier="go_to_show_story" id="QRx-Os-jhU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
