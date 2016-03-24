@@ -138,12 +138,9 @@
 				8ED0FC071C9B17EB00AAEC22 /* Comm */,
 				8ED0FC001C94431200AAEC22 /* Views */,
 				8ED0FBF91C942B5C00AAEC22 /* Models */,
-				8ED0FBE51C940FE300AAEC22 /* AppDelegate.h */,
-				8ED0FBE61C940FE300AAEC22 /* AppDelegate.m */,
 				8ED0FBEB1C940FE300AAEC22 /* Main.storyboard */,
 				8ED0FBEE1C940FE300AAEC22 /* Assets.xcassets */,
 				8ED0FBF01C940FE300AAEC22 /* LaunchScreen.storyboard */,
-				8ED0FBF31C940FE300AAEC22 /* Info.plist */,
 				8ED0FBE21C940FE300AAEC22 /* Supporting Files */,
 			);
 			path = NewsReader;
@@ -152,6 +149,10 @@
 		8ED0FBE21C940FE300AAEC22 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8ED0FBF31C940FE300AAEC22 /* Info.plist */,
+				8ED0FC041C9B0CFA00AAEC22 /* NewsReader-Bridging-Header.h */,
+				8ED0FBE51C940FE300AAEC22 /* AppDelegate.h */,
+				8ED0FBE61C940FE300AAEC22 /* AppDelegate.m */,
 				8ED0FBE31C940FE300AAEC22 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -164,7 +165,6 @@
 				8ED0FBFB1C942BCE00AAEC22 /* StoryModel.m */,
 				8ED0FBFD1C942DE200AAEC22 /* StoryCollection.h */,
 				8ED0FBFE1C942DE200AAEC22 /* StoryCollection.m */,
-				8ED0FC041C9B0CFA00AAEC22 /* NewsReader-Bridging-Header.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
