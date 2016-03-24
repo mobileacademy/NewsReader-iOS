@@ -49,6 +49,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.selectedStory = _dataSource[ indexPath.row ];
+    
+    [self performSegueWithIdentifier:@"go_to_show_story" sender:self];
 }
 
 - (void) setDataSource:(NSArray<StoryModel *> *)dataSource{
