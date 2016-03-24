@@ -10,7 +10,11 @@
 #import "StoryCollection.h"
 #import "StoryTableViewCell.h"
 
-@interface ViewController ()
+#import "NewsReader-Swift.h"
+
+@interface ViewController (){
+    
+}
 
 @end
 
@@ -47,6 +51,14 @@
     _dataSource = dataSource;
     
     [self.storyTable reloadData];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if( [segue.identifier isEqualToString:@"go_to_show_story"] ){
+        StoryViewController* dest = (StoryViewController*)segue.destinationViewController;
+        
+       
+    }
 }
 
 - (void)viewDidLoad {
