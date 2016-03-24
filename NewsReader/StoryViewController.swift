@@ -16,11 +16,22 @@ class StoryViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        goToUrl( "http://google.com" )
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func goToUrl(urlS:String){
+        guard let url = NSURL(string:urlS) else{
+            return
+        }
+        
+        let req = NSURLRequest(URL: url)
+        
+        webView.loadRequest(req)
     }
     
 
