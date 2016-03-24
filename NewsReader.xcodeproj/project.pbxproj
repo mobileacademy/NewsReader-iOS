@@ -155,7 +155,6 @@
 				8ED0FBFB1C942BCE00AAEC22 /* StoryModel.m */,
 				8ED0FBFD1C942DE200AAEC22 /* StoryCollection.h */,
 				8ED0FBFE1C942DE200AAEC22 /* StoryCollection.m */,
-				8ED0FC051C9B0CFB00AAEC22 /* HackerNewsAPI.swift */,
 				8ED0FC041C9B0CFA00AAEC22 /* NewsReader-Bridging-Header.h */,
 			);
 			name = Models;
@@ -174,6 +173,7 @@
 		8ED0FC071C9B17EB00AAEC22 /* Comm */ = {
 			isa = PBXGroup;
 			children = (
+				8ED0FC051C9B0CFB00AAEC22 /* HackerNewsAPI.swift */,
 				8ED0FC081C9B183700AAEC22 /* HackerNewsComm.swift */,
 			);
 			name = Comm;
