@@ -16,7 +16,6 @@ class StoryViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        goToUrl( "http://google.com" )
     }
 
     override func didReceiveMemoryWarning() {
