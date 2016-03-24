@@ -100,6 +100,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8EB138201CA3E0270043B63B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8ED0FBE81C940FE300AAEC22 /* ViewController.h */,
+				8ED0FBE91C940FE300AAEC22 /* ViewController.m */,
+				8E5109C01C9C295200744C64 /* HackerNewsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		8ED0FBD61C940FE300AAEC22 = {
 			isa = PBXGroup;
 			children = (
@@ -123,14 +133,13 @@
 		8ED0FBE11C940FE300AAEC22 /* NewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				8EB138201CA3E0270043B63B /* Controllers */,
 				8ED0FC181C9B2A5B00AAEC22 /* Podfile */,
 				8ED0FC071C9B17EB00AAEC22 /* Comm */,
 				8ED0FC001C94431200AAEC22 /* Views */,
 				8ED0FBF91C942B5C00AAEC22 /* Models */,
 				8ED0FBE51C940FE300AAEC22 /* AppDelegate.h */,
 				8ED0FBE61C940FE300AAEC22 /* AppDelegate.m */,
-				8ED0FBE81C940FE300AAEC22 /* ViewController.h */,
-				8ED0FBE91C940FE300AAEC22 /* ViewController.m */,
 				8ED0FBEB1C940FE300AAEC22 /* Main.storyboard */,
 				8ED0FBEE1C940FE300AAEC22 /* Assets.xcassets */,
 				8ED0FBF01C940FE300AAEC22 /* LaunchScreen.storyboard */,
@@ -165,7 +174,6 @@
 			children = (
 				8ED0FC011C94437900AAEC22 /* StoryTableViewCell.h */,
 				8ED0FC021C94437900AAEC22 /* StoryTableViewCell.m */,
-				8E5109C01C9C295200744C64 /* HackerNewsViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
