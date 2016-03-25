@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ma8-Aa-xG4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gtm-Ck-Pik">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -113,25 +113,6 @@
             </objects>
             <point key="canvasLocation" x="2175" y="324"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="fzs-JF-0cN">
-            <objects>
-                <viewController id="Kvp-rk-Eml" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="z4F-22-SgO"/>
-                        <viewControllerLayoutGuide type="bottom" id="rCN-6t-kKN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Al5-CR-eBe">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="2Er-8z-h8C"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wRi-uC-vYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-205" y="-494"/>
-        </scene>
         <!--Item 1-->
         <scene sceneID="vt3-ee-C30">
             <objects>
@@ -149,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hv-FT-KSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-205" y="-1155"/>
+            <point key="canvasLocation" x="-205" y="-515"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mYQ-ty-pLH">
@@ -162,12 +143,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="BhS-xi-Ibk" kind="relationship" relationship="viewControllers" id="X9i-0p-Bmr"/>
-                        <segue destination="Kvp-rk-Eml" kind="relationship" relationship="viewControllers" id="TIK-Rz-8Ge"/>
+                        <segue destination="Ma8-Aa-xG4" kind="relationship" relationship="viewControllers" id="gB3-Dd-cb4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThH-fr-Pde" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1025" y="-825"/>
+            <point key="canvasLocation" x="-1155" y="-81"/>
         </scene>
         <!--HackerNews-->
         <scene sceneID="Aa0-1B-QTh">
@@ -242,10 +223,11 @@
             </objects>
             <point key="canvasLocation" x="583" y="324"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="Ipy-Vz-9gJ">
             <objects>
                 <navigationController id="Ma8-Aa-xG4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Lbw-PG-ECv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nI6-Jn-yb1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
