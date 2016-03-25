@@ -7,10 +7,9 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class SettingsTableViewController: UITableViewController {
-
-    @IBOutlet weak var loginButtonParent: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

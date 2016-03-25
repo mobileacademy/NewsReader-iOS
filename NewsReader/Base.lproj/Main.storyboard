@@ -189,6 +189,16 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Qa-Vz-zsU" id="Ae6-FZ-E9N">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRI-ac-tGd" customClass="FBSDKLoginButton">
+                                                    <rect key="frame" x="8" y="7" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZRI-ac-tGd" firstAttribute="centerY" secondItem="Ae6-FZ-E9N" secondAttribute="centerY" id="ThF-Rm-45q"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="ZRI-ac-tGd" secondAttribute="leading" id="oA4-0g-caA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -199,9 +209,6 @@
                             <outlet property="delegate" destination="1mH-Vk-vZG" id="Jui-YJ-LBV"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="loginButtonParent" destination="Ae6-FZ-E9N" id="A3i-fy-5bg"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fog-Jw-Oug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
