@@ -131,9 +131,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3C-0y-lFF">
+                                <rect key="frame" x="0.0" y="78" width="600" height="473"/>
+                                <connections>
+                                    <segue destination="1mH-Vk-vZG" kind="embed" id="Kpw-1v-1lF"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GBS-xx-Yfb" firstAttribute="top" secondItem="Z3C-0y-lFF" secondAttribute="bottom" id="3O2-Vc-sHC"/>
+                            <constraint firstItem="Z3C-0y-lFF" firstAttribute="width" secondItem="yUQ-sy-fZm" secondAttribute="width" id="6l6-ot-LYz"/>
+                            <constraint firstItem="Z3C-0y-lFF" firstAttribute="centerX" secondItem="yUQ-sy-fZm" secondAttribute="centerX" id="Cw1-AH-ag2"/>
+                            <constraint firstItem="Z3C-0y-lFF" firstAttribute="top" secondItem="reZ-Sh-5nG" secondAttribute="bottom" constant="8" id="PG1-KG-0s3"/>
                             <constraint firstItem="reZ-Sh-5nG" firstAttribute="top" secondItem="vmY-VF-4xE" secondAttribute="bottom" constant="22" id="mOv-mD-1c5"/>
                             <constraint firstItem="reZ-Sh-5nG" firstAttribute="centerX" secondItem="yUQ-sy-fZm" secondAttribute="centerX" id="wmB-0c-urf"/>
                         </constraints>
@@ -161,6 +171,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThH-fr-Pde" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1155" y="-81"/>
+        </scene>
+        <!--Settings Table-->
+        <scene sceneID="L4n-Zy-vTo">
+            <objects>
+                <tableViewController title="Settings Table" id="1mH-Vk-vZG" customClass="SettingsTableViewController" customModule="NewsReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="4Zn-V3-oBK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="473"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Facebook login" id="Pce-YY-Lyu">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3Qa-Vz-zsU">
+                                        <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Qa-Vz-zsU" id="Ae6-FZ-E9N">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="1mH-Vk-vZG" id="JOI-fl-EZ2"/>
+                            <outlet property="delegate" destination="1mH-Vk-vZG" id="Jui-YJ-LBV"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="loginButtonParent" destination="Ae6-FZ-E9N" id="A3i-fy-5bg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fog-Jw-Oug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549" y="-515.5"/>
         </scene>
         <!--HackerNews-->
         <scene sceneID="Aa0-1B-QTh">

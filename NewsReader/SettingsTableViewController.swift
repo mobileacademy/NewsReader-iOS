@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
+    @IBOutlet weak var loginButtonParent: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
