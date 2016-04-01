@@ -40,6 +40,8 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
             let path = NSHomeDirectory()+"/Documents/bg.png"
             
             data.writeToFile(path, atomically: true)
+            
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: SettingsKey.CustomBG.rawValue)
         }
         
         picker.dismissViewControllerAnimated(true){}
