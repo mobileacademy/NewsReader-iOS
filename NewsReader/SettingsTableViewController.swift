@@ -32,6 +32,7 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             let action = UIAlertAction(title: "Camera", style: .Default ){
                 ac in
+                self.showPicker( .Camera )
             }
             
             alertController.addAction(action)
@@ -40,6 +41,7 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
         if UIImagePickerController.isSourceTypeAvailable(.SavedPhotosAlbum) {
             let action = UIAlertAction(title: "Photos", style: .Default ){
                 ac in
+                self.showPicker( .PhotoLibrary )
             }
             
             alertController.addAction(action)
@@ -54,9 +56,10 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
         presentViewController(alertController, animated: true){}
     }
     
-    func showPicker(){
+    func showPicker(type:UIImagePickerControllerSourceType){
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
+        pickerController.sourceType = type
         
         presentViewController(pickerController, animated: true, completion: { () in })
     }
