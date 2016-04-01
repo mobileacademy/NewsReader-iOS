@@ -16,7 +16,7 @@ class SettingsTableViewController: UITableViewController {
     @IBAction func toggleBGSwitch(sender: UISwitch) {
         print( "\(sender.on)" )
         
-        NSUserDefaults.standardUserDefaults().setBool(sender.on, forKey: "bg")
+        NSUserDefaults.standardUserDefaults().setBool(sender.on, forKey: SettingsKey.BG.rawValue)
         NSUserDefaults.standardUserDefaults().synchronize()
     }
     
@@ -28,7 +28,7 @@ class SettingsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        bgSwtich.on = NSUserDefaults.standardUserDefaults().boolForKey("bg")
+        bgSwtich.on = NSUserDefaults.standardUserDefaults().boolForKey( SettingsKey.BG.rawValue)
     }
 
     override func didReceiveMemoryWarning() {
