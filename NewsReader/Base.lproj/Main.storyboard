@@ -245,6 +245,32 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mp1-YE-pTq" id="RaT-a8-ZpD">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4U-Xl-2e9">
+                                                    <rect key="frame" x="8" y="11" width="145" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rL9-Sn-Vwi">
+                                                    <rect key="frame" x="413" y="7" width="179" height="29"/>
+                                                    <segments>
+                                                        <segment title="1" width="44"/>
+                                                        <segment title="2" width="44"/>
+                                                        <segment title="3" width="44"/>
+                                                        <segment title="4" width="44"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="bgValueChanged:" destination="1mH-Vk-vZG" eventType="valueChanged" id="RiK-gY-T9O"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="p4U-Xl-2e9" firstAttribute="centerY" secondItem="RaT-a8-ZpD" secondAttribute="centerY" id="Hfr-EU-rKT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rL9-Sn-Vwi" secondAttribute="trailing" id="L76-Tj-ovF"/>
+                                                <constraint firstItem="rL9-Sn-Vwi" firstAttribute="centerY" secondItem="RaT-a8-ZpD" secondAttribute="centerY" id="cQP-55-NWi"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="p4U-Xl-2e9" secondAttribute="leading" id="s0Z-zc-urU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -256,6 +282,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="bgSegment" destination="rL9-Sn-Vwi" id="0PX-1z-FhV"/>
                         <outlet property="bgSwtich" destination="Ufk-uV-93m" id="buy-le-dCk"/>
                     </connections>
                 </tableViewController>

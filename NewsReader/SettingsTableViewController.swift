@@ -12,12 +12,16 @@ import FBSDKLoginKit
 class SettingsTableViewController: UITableViewController {
     
     @IBOutlet weak var bgSwtich: UISwitch!
+    @IBOutlet weak var bgSegment: UISegmentedControl!
     
     @IBAction func toggleBGSwitch(sender: UISwitch) {
         print( "\(sender.on)" )
         
         NSUserDefaults.standardUserDefaults().setBool(sender.on, forKey: SettingsKey.BG.rawValue)
         NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    @IBAction func bgValueChanged(sender: UISegmentedControl) {
     }
     
     override func viewDidLoad() {
