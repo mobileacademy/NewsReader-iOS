@@ -27,6 +27,11 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
     }
     
     @IBAction func tappedChooseImage(sender: UIButton) {
+        let alertController = UIAlertController(title: "Choose", message: "Choose the source", preferredStyle: .Alert )
+        presentViewController(alertController, animated: true){}
+    }
+    
+    func showPicker(){
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         
