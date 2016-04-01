@@ -27,7 +27,30 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
     }
     
     @IBAction func tappedChooseImage(sender: UIButton) {
-        let alertController = UIAlertController(title: "Choose", message: "Choose the source", preferredStyle: .Alert )
+        let alertController = UIAlertController(title: "Choose", message: "Choose the source", preferredStyle: .ActionSheet )
+        
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            let action = UIAlertAction(title: "Camera", style: .Default ){
+                ac in
+            }
+            
+            alertController.addAction(action)
+        }
+        
+        if UIImagePickerController.isSourceTypeAvailable(.SavedPhotosAlbum) {
+            let action = UIAlertAction(title: "Photos", style: .Default ){
+                ac in
+            }
+            
+            alertController.addAction(action)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel){
+            ac in
+        }
+        
+        alertController.addAction(cancelAction)
+        
         presentViewController(alertController, animated: true){}
     }
     
