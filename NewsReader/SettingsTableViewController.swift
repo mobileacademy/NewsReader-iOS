@@ -11,6 +11,12 @@ import FBSDKLoginKit
 
 class SettingsTableViewController: UITableViewController {
     
+    @IBOutlet weak var bgSwtich: UISwitch!
+    
+    @IBAction func toggleBGSwitch(sender: UISwitch) {
+        print( "\(sender.on)" )
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

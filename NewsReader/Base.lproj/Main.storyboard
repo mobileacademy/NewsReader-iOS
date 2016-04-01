@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gtm-Ck-Pik">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gtm-Ck-Pik">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -128,7 +128,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reZ-Sh-5nG">
                                 <rect key="frame" x="258" y="42" width="85" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3C-0y-lFF">
@@ -176,10 +176,10 @@
         <scene sceneID="L4n-Zy-vTo">
             <objects>
                 <tableViewController title="Settings Table" id="1mH-Vk-vZG" customClass="SettingsTableViewController" customModule="NewsReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="4Zn-V3-oBK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="4Zn-V3-oBK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="473"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Facebook login" id="Pce-YY-Lyu">
                                 <cells>
@@ -203,12 +203,61 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Visual" id="ixM-wl-OdY">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vcp-c9-KCu">
+                                        <rect key="frame" x="0.0" y="145" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vcp-c9-KCu" id="lDe-cs-CCp">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2x-Dy-nYe">
+                                                    <rect key="frame" x="8" y="11" width="138" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ufk-uV-93m">
+                                                    <rect key="frame" x="543" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="toggleBGSwitch:" destination="1mH-Vk-vZG" eventType="valueChanged" id="Efo-P1-s35"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ufk-uV-93m" secondAttribute="trailing" id="1v1-iw-rfA"/>
+                                                <constraint firstItem="H2x-Dy-nYe" firstAttribute="centerY" secondItem="lDe-cs-CCp" secondAttribute="centerY" id="G1F-m9-zPn"/>
+                                                <constraint firstItem="Ufk-uV-93m" firstAttribute="leading" secondItem="lDe-cs-CCp" secondAttribute="leadingMargin" constant="535" id="iFH-Df-SKw"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="H2x-Dy-nYe" secondAttribute="leading" id="kAn-E9-Df1"/>
+                                                <constraint firstItem="Ufk-uV-93m" firstAttribute="centerY" secondItem="lDe-cs-CCp" secondAttribute="centerY" id="shi-iN-Ewg"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="iFH-Df-SKw"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Mp1-YE-pTq">
+                                        <rect key="frame" x="0.0" y="189" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mp1-YE-pTq" id="RaT-a8-ZpD">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="1mH-Vk-vZG" id="JOI-fl-EZ2"/>
                             <outlet property="delegate" destination="1mH-Vk-vZG" id="Jui-YJ-LBV"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="bgSwtich" destination="Ufk-uV-93m" id="buy-le-dCk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fog-Jw-Oug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
