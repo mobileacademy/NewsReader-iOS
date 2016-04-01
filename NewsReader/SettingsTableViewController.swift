@@ -22,6 +22,8 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func bgValueChanged(sender: UISegmentedControl) {
+        NSUserDefaults.standardUserDefaults().setInteger(sender.selectedSegmentIndex, forKey: SettingsKey.BGTheme.rawValue)
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     override func viewDidLoad() {
