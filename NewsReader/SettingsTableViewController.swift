@@ -34,6 +34,14 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]){
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        if let data = UIImagePNGRepresentation(image){
+            let path = NSHomeDirectory()+"/Documents/bg.png"
+            
+            data.writeToFile(path, atomically: true)
+        }
+        
         picker.dismissViewControllerAnimated(true){}
     }
     
