@@ -13,6 +13,7 @@ class HackerNewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.backgroundView = UIImageView.init(image: UIImage(named:"bg1.jpg") )
     }
 
     override func didReceiveMemoryWarning() {
