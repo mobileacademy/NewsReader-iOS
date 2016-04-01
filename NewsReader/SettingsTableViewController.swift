@@ -35,6 +35,7 @@ class SettingsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         bgSwtich.on = NSUserDefaults.standardUserDefaults().boolForKey( SettingsKey.BG.rawValue)
+        bgSegment.selectedSegmentIndex = NSUserDefaults.standardUserDefaults().integerForKey( SettingsKey.BGTheme.rawValue ) - 1
     }
 
     override func didReceiveMemoryWarning() {
