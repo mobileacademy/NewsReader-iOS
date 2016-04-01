@@ -18,7 +18,13 @@ class HackerNewsViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         if NSUserDefaults.standardUserDefaults().boolForKey(SettingsKey.BG.rawValue) {
-            let imageView = UIImageView.init(image: UIImage(named:"bg1.jpg"))
+            var theme = NSUserDefaults.standardUserDefaults().integerForKey(SettingsKey.BGTheme.rawValue)
+            
+            if theme == 0 {
+                theme = 1
+            }
+            
+            let imageView = UIImageView.init(image: UIImage(named:"bg\(theme).jpg"))
             imageView.contentMode = .ScaleAspectFill
             
             tableView.backgroundView = imageView
