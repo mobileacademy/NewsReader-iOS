@@ -26,6 +26,9 @@ class SettingsTableViewController: UITableViewController {
         NSUserDefaults.standardUserDefaults().synchronize()
     }
     
+    @IBAction func tappedChooseImage(sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
