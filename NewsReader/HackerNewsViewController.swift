@@ -12,11 +12,20 @@ class HackerNewsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let imageView = UIImageView.init(image: UIImage(named:"bg1.jpg"))
-        imageView.contentMode = .ScaleAspectFill
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
-        tableView.backgroundView = imageView
+        if NSUserDefaults.standardUserDefaults().boolForKey(SettingsKey.BG.rawValue) {
+            let imageView = UIImageView.init(image: UIImage(named:"bg1.jpg"))
+            imageView.contentMode = .ScaleAspectFill
+            
+            tableView.backgroundView = imageView
+        }
+        else {
+            tableView.backgroundView = nil
+        }
     }
 
     override func didReceiveMemoryWarning() {
