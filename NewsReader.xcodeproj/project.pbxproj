@@ -13,6 +13,7 @@
 		8E0B30EE1CAD6BC600C35A2D /* bg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E0B30EA1CAD6BC500C35A2D /* bg3.jpg */; };
 		8E0B30EF1CAD6BC600C35A2D /* bg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E0B30EB1CAD6BC500C35A2D /* bg4.jpg */; };
 		8E5109C11C9C295200744C64 /* HackerNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5109C01C9C295200744C64 /* HackerNewsViewController.swift */; };
+		8E8DC36D1CAE5830001E72C3 /* SettingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DC36C1CAE5830001E72C3 /* SettingsKey.swift */; };
 		8EB138221CA3EA850043B63B /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB138211CA3EA850043B63B /* StoryViewController.swift */; };
 		8EB138271CA54FD90043B63B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB138261CA54FD90043B63B /* SettingsTableViewController.swift */; };
 		8ED0FBE41C940FE300AAEC22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0FBE31C940FE300AAEC22 /* main.m */; };
@@ -47,6 +48,7 @@
 		8E0B30EA1CAD6BC500C35A2D /* bg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg3.jpg; sourceTree = "<group>"; };
 		8E0B30EB1CAD6BC500C35A2D /* bg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg4.jpg; sourceTree = "<group>"; };
 		8E5109C01C9C295200744C64 /* HackerNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsViewController.swift; sourceTree = "<group>"; };
+		8E8DC36C1CAE5830001E72C3 /* SettingsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsKey.swift; sourceTree = "<group>"; };
 		8EB138211CA3EA850043B63B /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		8EB138261CA54FD90043B63B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		8ED0FBDF1C940FE300AAEC22 /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,14 @@
 			path = res;
 			sourceTree = "<group>";
 		};
+		8E8DC36B1CAE57FF001E72C3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8E8DC36C1CAE5830001E72C3 /* SettingsKey.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		8EB138201CA3E0270043B63B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +168,7 @@
 		8ED0FBE11C940FE300AAEC22 /* NewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				8E8DC36B1CAE57FF001E72C3 /* Settings */,
 				8E0B30E71CAD6BC500C35A2D /* res */,
 				8EB138201CA3E0270043B63B /* Controllers */,
 				8ED0FC181C9B2A5B00AAEC22 /* Podfile */,
@@ -389,6 +400,7 @@
 				8E5109C11C9C295200744C64 /* HackerNewsViewController.swift in Sources */,
 				8ED0FBE41C940FE300AAEC22 /* main.m in Sources */,
 				8ED0FC091C9B183700AAEC22 /* HackerNewsComm.swift in Sources */,
+				8E8DC36D1CAE5830001E72C3 /* SettingsKey.swift in Sources */,
 				8ED0FBFF1C942DE200AAEC22 /* StoryCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
