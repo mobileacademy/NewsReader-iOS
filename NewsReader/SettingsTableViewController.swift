@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 
-class SettingsTableViewController: UITableViewController {
+class SettingsTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     @IBOutlet weak var bgSwtich: UISwitch!
     @IBOutlet weak var bgSegment: UISegmentedControl!
@@ -27,6 +27,19 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func tappedChooseImage(sender: UIButton) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        
+        presentViewController(pickerController, animated: true, completion: { () in })
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]){
+        picker.dismissViewControllerAnimated(true){}
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController)
+    {
+        picker.dismissViewControllerAnimated(true){}
     }
     
     override func viewDidLoad() {
