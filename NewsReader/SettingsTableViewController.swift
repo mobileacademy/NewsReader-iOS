@@ -93,6 +93,27 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         bgSwtich.on = NSUserDefaults.standardUserDefaults().boolForKey( SettingsKey.BG.rawValue)
         bgSegment.selectedSegmentIndex = NSUserDefaults.standardUserDefaults().integerForKey( SettingsKey.BGTheme.rawValue ) - 1
+        
+        if let token = FBSDKAccessToken.currentAccessToken() {
+            print( token )
+        }
+        else{
+            print("user not logged in")
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(FBSDKAccessTokenDidChangeNotification, object: nil, queue: NSOperationQueue.mainQueue()){
+            note in
+            
+            guard FBSDKAccessToken.currentAccessToken()?.userID != nil else{
+                return
+            }
+            
+            FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"name,email"]).startWithCompletionHandler({ (connection, result, error) in
+                print(result)
+            })
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
