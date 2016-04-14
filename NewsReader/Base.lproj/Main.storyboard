@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--HackerNews Stories-->
@@ -299,6 +300,36 @@
                                                 <constraint firstItem="Fl8-h3-myw" firstAttribute="centerY" secondItem="2iu-VQ-m04" secondAttribute="centerY" id="Lgn-FR-0Ep"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="ISG-JG-35a" secondAttribute="leading" id="edC-1D-68r"/>
                                                 <constraint firstItem="ISG-JG-35a" firstAttribute="centerY" secondItem="2iu-VQ-m04" secondAttribute="centerY" id="qNV-za-9Yu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Send Message" id="ZSC-Qg-dql">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6lr-ES-Zvj">
+                                        <rect key="frame" x="0.0" y="328" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6lr-ES-Zvj" id="QSk-R2-DfC">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBF-CN-MVK">
+                                                    <rect key="frame" x="8" y="7" width="300" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JU-nL-lKh">
+                                                    <rect key="frame" x="556" y="6" width="36" height="30"/>
+                                                    <state key="normal" title="Send"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aBF-CN-MVK" firstAttribute="centerY" secondItem="QSk-R2-DfC" secondAttribute="centerY" id="0O3-aU-acn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4JU-nL-lKh" secondAttribute="trailing" id="3Gb-vi-U1A"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="aBF-CN-MVK" secondAttribute="leading" id="IMd-pL-iMP"/>
+                                                <constraint firstItem="aBF-CN-MVK" firstAttribute="width" secondItem="QSk-R2-DfC" secondAttribute="width" multiplier="0.5" id="p3W-WI-xzB"/>
+                                                <constraint firstItem="4JU-nL-lKh" firstAttribute="centerY" secondItem="QSk-R2-DfC" secondAttribute="centerY" id="qQn-70-KZs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
