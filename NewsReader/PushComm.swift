@@ -24,7 +24,7 @@ class PushComm: NSObject {
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url){
             (data, response, err) in
-            print(resonse)
+            print(response)
         }
         
         task.resume()
