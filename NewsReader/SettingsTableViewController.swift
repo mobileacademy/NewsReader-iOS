@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 
-class SettingsTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class SettingsTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
     
     @IBOutlet weak var bgSwtich: UISwitch!
     @IBOutlet weak var bgSegment: UISegmentedControl!
@@ -119,6 +119,13 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn( textField:UITextField )->Bool{
+        textField.resignFirstResponder()
+        
+        return true;
     }
 
     // MARK: - Table view data source
