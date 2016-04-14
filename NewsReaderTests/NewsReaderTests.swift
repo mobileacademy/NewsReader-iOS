@@ -53,4 +53,10 @@ class NewsReaderTests: XCTestCase {
         }
     }
     
+    func testSendPushToken(){
+        let comm = PushComm()
+        
+        comm.addToken("some token here")
+    }
+    
 }
