@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NewsReader-Swift.h"
 @import FBSDKCoreKit;
 
 @interface AppDelegate ()
@@ -31,6 +32,8 @@
     token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
     token = [token stringByReplacingOccurrencesOfString:@"<" withString:@""];
     token = [token stringByReplacingOccurrencesOfString:@">" withString:@""];
+    
+    [PushComm addToken:token];
     
     NSLog(@"%@", token);
 }
