@@ -8,7 +8,7 @@
 
 class PushComm: NSObject {
     
-    func addToken( token:String ){
+    static func addToken( token:String ){
         let url = NSURL( string:PushAPI.addTokenEndpoint(token) )!
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url){
@@ -19,7 +19,7 @@ class PushComm: NSObject {
         task.resume()
     }
     
-    func sendMessage( mess:String ){
+    static func sendMessage( mess:String ){
         let url = NSURL( string:PushAPI.sendPushEndpoint(mess) )!
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url){
