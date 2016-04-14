@@ -9,6 +9,11 @@
 import Foundation
 
 class PushAPI{
-    static let addTokenEndpoint:String = "192.168.13.19/newsreaderpush/public/add_token/"
-    static let sendPushEndpoint:String = "192.168.13.19/newsreaderpush/public/send_notification/"
+    static func addTokenEndpoint(token:String)->String{
+        return "192.168.13.19/newsreaderpush/public/add_token/\(token)"
+    }
+    
+    static func sendPushEndpoint(mess:String)->String{
+        return "192.168.13.19/newsreaderpush/public/send_notification/\(mess)"
+    }
 }
