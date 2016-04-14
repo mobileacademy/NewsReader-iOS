@@ -20,7 +20,16 @@
     // Override point for customization after application launch.
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
+    
+    [self askForPushPermission:application];
+    
     return YES;
+}
+
+- (void) askForPushPermission:(UIApplication*) application{
+    UIUserNotificationSettings* notifSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil];
+    
+    [application registerUserNotificationSettings:notifSettings];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
