@@ -15,6 +15,7 @@
 		8E5109C11C9C295200744C64 /* HackerNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5109C01C9C295200744C64 /* HackerNewsViewController.swift */; };
 		8E73D7FF1CBF97FA007AA526 /* PushAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D7FE1CBF97FA007AA526 /* PushAPI.swift */; };
 		8E73D8011CBF995A007AA526 /* PushComm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D8001CBF995A007AA526 /* PushComm.swift */; };
+		8E73D8031CC0DA09007AA526 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E73D8021CC0DA09007AA526 /* Settings.bundle */; };
 		8E8DC36D1CAE5830001E72C3 /* SettingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DC36C1CAE5830001E72C3 /* SettingsKey.swift */; };
 		8EB138221CA3EA850043B63B /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB138211CA3EA850043B63B /* StoryViewController.swift */; };
 		8EB138271CA54FD90043B63B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB138261CA54FD90043B63B /* SettingsTableViewController.swift */; };
@@ -52,6 +53,7 @@
 		8E5109C01C9C295200744C64 /* HackerNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsViewController.swift; sourceTree = "<group>"; };
 		8E73D7FE1CBF97FA007AA526 /* PushAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushAPI.swift; sourceTree = "<group>"; };
 		8E73D8001CBF995A007AA526 /* PushComm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushComm.swift; sourceTree = "<group>"; };
+		8E73D8021CC0DA09007AA526 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8E8DC36C1CAE5830001E72C3 /* SettingsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsKey.swift; sourceTree = "<group>"; };
 		8EB138211CA3EA850043B63B /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		8EB138261CA54FD90043B63B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				8ED0FC041C9B0CFA00AAEC22 /* NewsReader-Bridging-Header.h */,
 				8ED0FBE51C940FE300AAEC22 /* AppDelegate.h */,
 				8ED0FBE61C940FE300AAEC22 /* AppDelegate.m */,
+				8E73D8021CC0DA09007AA526 /* Settings.bundle */,
 				8ED0FBE31C940FE300AAEC22 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -336,6 +339,7 @@
 				8ED0FC191C9B2A5B00AAEC22 /* Podfile in Resources */,
 				8E0B30ED1CAD6BC600C35A2D /* bg2.jpg in Resources */,
 				8ED0FBED1C940FE300AAEC22 /* Main.storyboard in Resources */,
+				8E73D8031CC0DA09007AA526 /* Settings.bundle in Resources */,
 				8E0B30EC1CAD6BC600C35A2D /* bg1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
