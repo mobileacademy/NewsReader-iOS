@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NewsReader-Swift.h"
+@import UIKit;
 @import FBSDKCoreKit;
 
 @interface AppDelegate ()
@@ -24,7 +25,37 @@
     
     [self askForPushPermission:application];
     
+    NSLog(@"%@", launchOptions);
+    
+    NSDictionary* push = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    
+    if( push != nil ){
+        NSString* message = push[@"aps"][@"alert"];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self showAlert:message];
+        });
+    }
+    
     return YES;
+}
+
+- (void)showAlert:(NSString*)message{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Notification" message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:okAction];
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)application:(UIApplication*)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo{
+    NSLog(@"%@",userInfo);
+    
+    NSString* mess = userInfo[@"aps"][@"alert"];
+    
+    [self showAlert:mess];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
