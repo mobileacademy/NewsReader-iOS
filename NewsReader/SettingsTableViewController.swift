@@ -26,7 +26,9 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
         NSUserDefaults.standardUserDefaults().setInteger(sender.selectedSegmentIndex+1, forKey: SettingsKey.BGTheme.rawValue)
         NSUserDefaults.standardUserDefaults().synchronize()
     }
+    
     @IBAction func tappedSendButton(sender: UIButton) {
+        PushComm.sendMessage(messageField.text!)
     }
     
     @IBAction func tappedChooseImage(sender: UIButton) {
