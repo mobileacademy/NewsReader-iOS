@@ -118,7 +118,14 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
             })
         }
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap));
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    func handleTap(sender:UITapGestureRecognizer){
+        print("tap")
         
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
