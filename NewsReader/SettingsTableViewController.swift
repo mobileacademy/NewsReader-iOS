@@ -13,6 +13,7 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
     
     @IBOutlet weak var bgSwtich: UISwitch!
     @IBOutlet weak var bgSegment: UISegmentedControl!
+    @IBOutlet weak var messageField: UITextField!
     
     @IBAction func toggleBGSwitch(sender: UISwitch) {
         print( "\(sender.on)" )
@@ -24,6 +25,8 @@ class SettingsTableViewController: UITableViewController,UIImagePickerController
     @IBAction func bgValueChanged(sender: UISegmentedControl) {
         NSUserDefaults.standardUserDefaults().setInteger(sender.selectedSegmentIndex+1, forKey: SettingsKey.BGTheme.rawValue)
         NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    @IBAction func tappedSendButton(sender: UIButton) {
     }
     
     @IBAction func tappedChooseImage(sender: UIButton) {

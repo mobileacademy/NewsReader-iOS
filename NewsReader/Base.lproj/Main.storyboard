@@ -325,6 +325,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JU-nL-lKh">
                                                     <rect key="frame" x="556" y="6" width="36" height="30"/>
                                                     <state key="normal" title="Send"/>
+                                                    <connections>
+                                                        <action selector="tappedSendButton:" destination="1mH-Vk-vZG" eventType="touchUpInside" id="onp-YY-vy2"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -347,6 +350,7 @@
                     <connections>
                         <outlet property="bgSegment" destination="rL9-Sn-Vwi" id="0PX-1z-FhV"/>
                         <outlet property="bgSwtich" destination="Ufk-uV-93m" id="buy-le-dCk"/>
+                        <outlet property="messageField" destination="aBF-CN-MVK" id="A3D-HO-q1u"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fog-Jw-Oug" userLabel="First Responder" sceneMemberID="firstResponder"/>
